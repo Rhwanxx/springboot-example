@@ -1,0 +1,6 @@
+#多环境配置   application.properties中的spring.profiles.active=dev时生效
+#注意：：属性之后有空格
+user:
+  username: 多配置测试
+  password: 密码
+  age: 24
