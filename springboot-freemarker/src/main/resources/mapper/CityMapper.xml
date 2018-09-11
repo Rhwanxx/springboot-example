@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springboot.dao.CityMapper" >
+  <resultMap id="BaseResultMap" type="com.springboot.domain.City" >
+    <constructor >
+      <idArg column="CITY_ID" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="CITY_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="CITY_MEMO" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="CITY_LEVEL" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="CITY_COMMENT" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    CITY_ID, CITY_NAME, CITY_MEMO, CITY_LEVEL, CITY_COMMENT
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from city
+    where CITY_ID = #{cityId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from city
+    where CITY_ID = #{cityId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.springboot.domain.City" >
+    insert into city (CITY_ID, CITY_NAME, CITY_MEMO, 
+      CITY_LEVEL, CITY_COMMENT)
+    values (#{cityId,jdbcType=INTEGER}, #{cityName,jdbcType=VARCHAR}, #{cityMemo,jdbcType=VARCHAR}, 
+      #{cityLevel,jdbcType=INTEGER}, #{cityComment,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.springboot.domain.City" >
+    insert into city
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="cityId != null" >
+        CITY_ID,
+      </if>
+      <if test="cityName != null" >
+        CITY_NAME,
+      </if>
+      <if test="cityMemo != null" >
+        CITY_MEMO,
+      </if>
+      <if test="cityLevel != null" >
+        CITY_LEVEL,
+      </if>
+      <if test="cityComment != null" >
+        CITY_COMMENT,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="cityId != null" >
+        #{cityId,jdbcType=INTEGER},
+      </if>
+      <if test="cityName != null" >
+        #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityMemo != null" >
+        #{cityMemo,jdbcType=VARCHAR},
+      </if>
+      <if test="cityLevel != null" >
+        #{cityLevel,jdbcType=INTEGER},
+      </if>
+      <if test="cityComment != null" >
+        #{cityComment,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springboot.domain.City" >
+    update city
+    <set >
+      <if test="cityName != null" >
+        CITY_NAME = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityMemo != null" >
+        CITY_MEMO = #{cityMemo,jdbcType=VARCHAR},
+      </if>
+      <if test="cityLevel != null" >
+        CITY_LEVEL = #{cityLevel,jdbcType=INTEGER},
+      </if>
+      <if test="cityComment != null" >
+        CITY_COMMENT = #{cityComment,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where CITY_ID = #{cityId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springboot.domain.City" >
+    update city
+    set CITY_NAME = #{cityName,jdbcType=VARCHAR},
+      CITY_MEMO = #{cityMemo,jdbcType=VARCHAR},
+      CITY_LEVEL = #{cityLevel,jdbcType=INTEGER},
+      CITY_COMMENT = #{cityComment,jdbcType=VARCHAR}
+    where CITY_ID = #{cityId,jdbcType=INTEGER}
+  </update>
+
+  <!--自定义SQL-->
+
+  <select id="findCityByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List" />
+    from city
+    where city_name = #{cityName}
+  </select>
+
+  <select id="findAll" resultMap="BaseResultMap" parameterType="java.util.List">
+    select
+    <include refid="Base_Column_List" />
+    from city
+  </select>
+</mapper>

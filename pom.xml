@@ -9,8 +9,8 @@
     <packaging>pom</packaging>
 
     <!-- 项目说明：这里作为聚合工程的父工程 -->
-    <groupId>com.hehe</groupId>
-    <artifactId>springboot-integration</artifactId>
+    <groupId>com.springboot</groupId>
+    <artifactId>springboot-example</artifactId>
     <version>1.0.0.RELEASE</version>
 
     <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
@@ -24,6 +24,8 @@
     <!-- 模块说明：这里声明多个子模块 -->
     <modules>
         <module>quick-start</module>
+        <module>basic-config</module>
+        <module>mybatis-generator</module>
     </modules>
 
     <!-- 版本说明：这里统一管理依赖的版本号 -->
