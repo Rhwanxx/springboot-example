@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @SpringBootApplication
 // mapper 接口类扫描包配置
-//@MapperScan("com.spring.springboot.dao")
+@MapperScan("com.spring.springboot.dao")
 public class SpringbootMybatisApplication {
 
     public static void main(String[] args) {
