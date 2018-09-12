@@ -1,0 +1,471 @@
+2018-09-12 12:39:46.393  INFO 10344 --- [main] c.springboot.SpringbootRedisApplication  : Starting SpringbootRedisApplication on DESKTOP-85HJCKK with PID 10344 (D:\springboot-example\springboot-redis\target\classes started by 13072 in D:\springboot-example)
+2018-09-12 12:39:46.402  INFO 10344 --- [main] c.springboot.SpringbootRedisApplication  : No active profile set, falling back to default profiles: default
+2018-09-12 12:39:46.530  INFO 10344 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27216cd: startup date [Wed Sep 12 12:39:46 CST 2018]; root of context hierarchy
+2018-09-12 12:39:47.344  INFO 10344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-09-12 12:39:47.722  INFO 10344 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$63c619b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-12 12:39:48.117  INFO 10344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-09-12 12:39:48.143  INFO 10344 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-12 12:39:48.143  INFO 10344 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-09-12 12:39:48.149  INFO 10344 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\jdk1.7.0_79\bin;D:\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;D:\Git\cmd;D:\Git\bin;D:\mysql-8.0.12-winx64\bin;D:\Redis-x64-3.2.100\;D:\consul_1.2.2_windows_amd64\;D:\erl10.0.1\bin;C:\Users\13072\AppData\Local\Microsoft\WindowsApps;;.]
+2018-09-12 12:39:48.254  INFO 10344 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-12 12:39:48.254  INFO 10344 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1724 ms
+2018-09-12 12:39:48.334  INFO 10344 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-09-12 12:39:48.339  INFO 10344 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-12 12:39:48.339  INFO 10344 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-12 12:39:48.339  INFO 10344 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-12 12:39:48.339  INFO 10344 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-12 12:39:49.225  INFO 10344 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 12:39:49.487  INFO 10344 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27216cd: startup date [Wed Sep 12 12:39:46 CST 2018]; root of context hierarchy
+2018-09-12 12:39:49.547  INFO 10344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll],methods=[GET]}" onto public java.util.List<com.springboot.domain.UserInfo> com.springboot.springbootredis.RedisController.getAllUser()
+2018-09-12 12:39:49.549  INFO 10344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll/{userId}]}" onto public com.springboot.domain.UserInfo com.springboot.springbootredis.RedisController.getAllUser(int)
+2018-09-12 12:39:49.552  INFO 10344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-12 12:39:49.553  INFO 10344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-12 12:39:49.583  INFO 10344 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 12:39:49.583  INFO 10344 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 12:39:50.032  INFO 10344 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-12 12:39:50.039  INFO 10344 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-09-12 12:39:50.046  INFO 10344 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-09-12 12:39:50.084  INFO 10344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-09-12 12:39:50.088  INFO 10344 --- [main] c.springboot.SpringbootRedisApplication  : Started SpringbootRedisApplication in 4.604 seconds (JVM running for 5.543)
+2018-09-12 12:40:01.085  INFO 10344 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-09-12 12:40:01.085  INFO 10344 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-12 12:40:01.107  INFO 10344 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-09-12 12:40:01.237  INFO 10344 --- [http-nio-8080-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2018-09-12 12:40:01.238  INFO 10344 --- [http-nio-8080-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2018-09-12 12:40:01.743  INFO 10344 --- [http-nio-8080-exec-2] c.s.service.impl.RedisBootServiceImpl    : 用户信息从缓存中获取》》UserInfo{userId=1, userName='张三', userClass='三班', memo='测试数据'}
+2018-09-12 12:41:23.703  INFO 11244 --- [main] c.springboot.SpringbootRedisApplication  : Starting SpringbootRedisApplication on DESKTOP-85HJCKK with PID 11244 (D:\springboot-example\springboot-redis\target\classes started by 13072 in D:\springboot-example)
+2018-09-12 12:41:23.706  INFO 11244 --- [main] c.springboot.SpringbootRedisApplication  : No active profile set, falling back to default profiles: default
+2018-09-12 12:41:23.793  INFO 11244 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7a67e3c6: startup date [Wed Sep 12 12:41:23 CST 2018]; root of context hierarchy
+2018-09-12 12:41:24.464  INFO 11244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-09-12 12:41:24.835  INFO 11244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c762b2f1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-12 12:41:25.230  INFO 11244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-09-12 12:41:25.257  INFO 11244 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-12 12:41:25.258  INFO 11244 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-09-12 12:41:25.263  INFO 11244 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\jdk1.7.0_79\bin;D:\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;D:\Git\cmd;D:\Git\bin;D:\mysql-8.0.12-winx64\bin;D:\Redis-x64-3.2.100\;D:\consul_1.2.2_windows_amd64\;D:\erl10.0.1\bin;C:\Users\13072\AppData\Local\Microsoft\WindowsApps;;.]
+2018-09-12 12:41:25.368  INFO 11244 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-12 12:41:25.369  INFO 11244 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1577 ms
+2018-09-12 12:41:25.449  INFO 11244 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-09-12 12:41:25.455  INFO 11244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-12 12:41:25.455  INFO 11244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-12 12:41:25.455  INFO 11244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-12 12:41:25.455  INFO 11244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-12 12:41:26.365  INFO 11244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 12:41:26.642  INFO 11244 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7a67e3c6: startup date [Wed Sep 12 12:41:23 CST 2018]; root of context hierarchy
+2018-09-12 12:41:26.704  INFO 11244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll],methods=[GET]}" onto public java.util.List<com.springboot.domain.UserInfo> com.springboot.springbootredis.RedisController.getAllUser()
+2018-09-12 12:41:26.706  INFO 11244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll/{userId}]}" onto public com.springboot.domain.UserInfo com.springboot.springbootredis.RedisController.getAllUser(int)
+2018-09-12 12:41:26.709  INFO 11244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-12 12:41:26.710  INFO 11244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-12 12:41:26.742  INFO 11244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 12:41:26.742  INFO 11244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 12:41:27.221  INFO 11244 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-12 12:41:27.222  INFO 11244 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-09-12 12:41:27.228  INFO 11244 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-09-12 12:41:27.266  INFO 11244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-09-12 12:41:27.271  INFO 11244 --- [main] c.springboot.SpringbootRedisApplication  : Started SpringbootRedisApplication in 4.191 seconds (JVM running for 5.047)
+2018-09-12 12:41:27.358  INFO 11244 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-09-12 12:41:27.358  INFO 11244 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-12 12:41:27.380  INFO 11244 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-09-12 12:41:27.508  INFO 11244 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2018-09-12 12:41:27.510  INFO 11244 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2018-09-12 12:41:28.025  INFO 11244 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-09-12 12:41:28.395  INFO 11244 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-09-12 12:41:28.442  INFO 11244 --- [http-nio-8080-exec-1] c.s.service.impl.RedisBootServiceImpl    : 用户信息从DB中获取》》UserInfo{userId=2, userName='李四', userClass='四班', memo='测试数据'}
+2018-09-12 12:41:53.288  INFO 11244 --- [http-nio-8080-exec-3] c.s.service.impl.RedisBootServiceImpl    : 用户信息从缓存中获取》》UserInfo{userId=2, userName='李四', userClass='四班', memo='测试数据'}
+2018-09-12 16:18:38.039  INFO 3848 --- [main] c.springboot.SpringbootRedisApplication  : Starting SpringbootRedisApplication on DESKTOP-85HJCKK with PID 3848 (D:\springboot-example\springboot-redis\target\classes started by 13072 in D:\springboot-example)
+2018-09-12 16:18:38.042  INFO 3848 --- [main] c.springboot.SpringbootRedisApplication  : No active profile set, falling back to default profiles: default
+2018-09-12 16:18:38.140  INFO 3848 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@20ca951f: startup date [Wed Sep 12 16:18:38 CST 2018]; root of context hierarchy
+2018-09-12 16:18:38.883  INFO 3848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-09-12 16:18:39.280  INFO 3848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff9e9081] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-12 16:18:39.676  INFO 3848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-09-12 16:18:39.704  INFO 3848 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-12 16:18:39.704  INFO 3848 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-09-12 16:18:39.709  INFO 3848 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\jdk1.7.0_79\bin;D:\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;D:\Git\cmd;D:\Git\bin;D:\mysql-8.0.12-winx64\bin;D:\Redis-x64-3.2.100\;D:\consul_1.2.2_windows_amd64\;D:\erl10.0.1\bin;C:\Users\13072\AppData\Local\Microsoft\WindowsApps;;.]
+2018-09-12 16:18:39.804  INFO 3848 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-12 16:18:39.804  INFO 3848 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1664 ms
+2018-09-12 16:18:39.879  INFO 3848 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-09-12 16:18:39.885  INFO 3848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-12 16:18:39.886  INFO 3848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-12 16:18:39.886  INFO 3848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-12 16:18:39.886  INFO 3848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-12 16:18:40.779  INFO 3848 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:18:41.041  INFO 3848 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@20ca951f: startup date [Wed Sep 12 16:18:38 CST 2018]; root of context hierarchy
+2018-09-12 16:18:41.099  INFO 3848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll],methods=[GET]}" onto public java.util.List<com.springboot.domain.UserInfo> com.springboot.springbootredis.RedisController.getAllUser()
+2018-09-12 16:18:41.101  INFO 3848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll/{userId}]}" onto public com.springboot.domain.UserInfo com.springboot.springbootredis.RedisController.getAllUser(int)
+2018-09-12 16:18:41.105  INFO 3848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-12 16:18:41.105  INFO 3848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-12 16:18:41.136  INFO 3848 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:18:41.136  INFO 3848 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:18:41.618  INFO 3848 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-12 16:18:41.619  INFO 3848 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-09-12 16:18:41.625  INFO 3848 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-09-12 16:18:41.670  INFO 3848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-09-12 16:18:41.675  INFO 3848 --- [main] c.springboot.SpringbootRedisApplication  : Started SpringbootRedisApplication in 4.222 seconds (JVM running for 5.148)
+2018-09-12 16:18:58.700  INFO 3848 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-09-12 16:18:58.701  INFO 3848 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-12 16:18:58.726  INFO 3848 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2018-09-12 16:18:58.834  INFO 3848 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2018-09-12 16:18:58.836  INFO 3848 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2018-09-12 16:19:09.302 ERROR 3848 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.98.187.229:6379] with root cause
+
+io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267) ~[netty-transport-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:464) ~[netty-transport-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+
+2018-09-12 16:35:22.286  INFO 11528 --- [main] c.springboot.SpringbootRedisApplication  : Starting SpringbootRedisApplication on DESKTOP-85HJCKK with PID 11528 (D:\springboot-example\springboot-redis\target\classes started by 13072 in D:\springboot-example)
+2018-09-12 16:35:22.290  INFO 11528 --- [main] c.springboot.SpringbootRedisApplication  : No active profile set, falling back to default profiles: default
+2018-09-12 16:35:22.350  INFO 11528 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4b40f651: startup date [Wed Sep 12 16:35:22 CST 2018]; root of context hierarchy
+2018-09-12 16:35:23.076  INFO 11528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-09-12 16:35:23.459  INFO 11528 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d4f6e733] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-12 16:35:23.854  INFO 11528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-09-12 16:35:23.881  INFO 11528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-12 16:35:23.882  INFO 11528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-09-12 16:35:23.887  INFO 11528 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\jdk1.7.0_79\bin;D:\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;D:\Git\cmd;D:\Git\bin;D:\mysql-8.0.12-winx64\bin;D:\Redis-x64-3.2.100\;D:\consul_1.2.2_windows_amd64\;D:\erl10.0.1\bin;C:\Users\13072\AppData\Local\Microsoft\WindowsApps;;.]
+2018-09-12 16:35:23.991  INFO 11528 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-12 16:35:23.991  INFO 11528 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1641 ms
+2018-09-12 16:35:24.073  INFO 11528 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-09-12 16:35:24.078  INFO 11528 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-12 16:35:24.079  INFO 11528 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-12 16:35:24.079  INFO 11528 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-12 16:35:24.079  INFO 11528 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-12 16:35:24.952  INFO 11528 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:35:25.217  INFO 11528 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4b40f651: startup date [Wed Sep 12 16:35:22 CST 2018]; root of context hierarchy
+2018-09-12 16:35:25.281  INFO 11528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll],methods=[GET]}" onto public java.util.List<com.springboot.domain.UserInfo> com.springboot.springbootredis.RedisController.getAllUser()
+2018-09-12 16:35:25.283  INFO 11528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll/{userId}]}" onto public com.springboot.domain.UserInfo com.springboot.springbootredis.RedisController.getAllUser(int)
+2018-09-12 16:35:25.286  INFO 11528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-12 16:35:25.287  INFO 11528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-12 16:35:25.320  INFO 11528 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:35:25.320  INFO 11528 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:35:25.778  INFO 11528 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-12 16:35:25.780  INFO 11528 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-09-12 16:35:25.785  INFO 11528 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-09-12 16:35:25.822  INFO 11528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-09-12 16:35:25.827  INFO 11528 --- [main] c.springboot.SpringbootRedisApplication  : Started SpringbootRedisApplication in 4.145 seconds (JVM running for 5.012)
+2018-09-12 16:35:33.775  INFO 11528 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-09-12 16:35:33.775  INFO 11528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-12 16:35:33.797  INFO 11528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-09-12 16:35:33.915  INFO 11528 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2018-09-12 16:35:33.917  INFO 11528 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2018-09-12 16:35:44.429 ERROR 11528 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.98.187.229:6379] with root cause
+
+io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267) ~[netty-transport-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:464) ~[netty-transport-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+
+2018-09-12 16:37:34.733  INFO 7616 --- [main] c.springboot.SpringbootRedisApplication  : Starting SpringbootRedisApplication on DESKTOP-85HJCKK with PID 7616 (D:\springboot-example\springboot-redis\target\classes started by 13072 in D:\springboot-example)
+2018-09-12 16:37:34.741  INFO 7616 --- [main] c.springboot.SpringbootRedisApplication  : No active profile set, falling back to default profiles: default
+2018-09-12 16:37:34.826  INFO 7616 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4b40f651: startup date [Wed Sep 12 16:37:34 CST 2018]; root of context hierarchy
+2018-09-12 16:37:35.517  INFO 7616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-09-12 16:37:35.913  INFO 7616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7079c244] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-12 16:37:36.325  INFO 7616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-09-12 16:37:36.354  INFO 7616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-12 16:37:36.354  INFO 7616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-09-12 16:37:36.360  INFO 7616 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\jdk1.7.0_79\bin;D:\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;D:\Git\cmd;D:\Git\bin;D:\mysql-8.0.12-winx64\bin;D:\Redis-x64-3.2.100\;D:\consul_1.2.2_windows_amd64\;D:\erl10.0.1\bin;C:\Users\13072\AppData\Local\Microsoft\WindowsApps;;.]
+2018-09-12 16:37:36.463  INFO 7616 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-12 16:37:36.463  INFO 7616 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1637 ms
+2018-09-12 16:37:36.545  INFO 7616 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-09-12 16:37:36.551  INFO 7616 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-12 16:37:36.551  INFO 7616 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-12 16:37:36.551  INFO 7616 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-12 16:37:36.551  INFO 7616 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-12 16:37:37.423  INFO 7616 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:37:37.685  INFO 7616 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4b40f651: startup date [Wed Sep 12 16:37:34 CST 2018]; root of context hierarchy
+2018-09-12 16:37:37.744  INFO 7616 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll],methods=[GET]}" onto public java.util.List<com.springboot.domain.UserInfo> com.springboot.springbootredis.RedisController.getAllUser()
+2018-09-12 16:37:37.746  INFO 7616 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll/{userId}]}" onto public com.springboot.domain.UserInfo com.springboot.springbootredis.RedisController.getAllUser(int)
+2018-09-12 16:37:37.750  INFO 7616 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-12 16:37:37.751  INFO 7616 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-12 16:37:37.782  INFO 7616 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:37:37.782  INFO 7616 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:37:38.230  INFO 7616 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-12 16:37:38.231  INFO 7616 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-09-12 16:37:38.237  INFO 7616 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-09-12 16:37:38.274  INFO 7616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-09-12 16:37:38.287  INFO 7616 --- [main] c.springboot.SpringbootRedisApplication  : Started SpringbootRedisApplication in 4.153 seconds (JVM running for 4.99)
+2018-09-12 16:37:49.310  INFO 2436 --- [main] c.springboot.SpringbootRedisApplication  : Starting SpringbootRedisApplication on DESKTOP-85HJCKK with PID 2436 (D:\springboot-example\springboot-redis\target\classes started by 13072 in D:\springboot-example)
+2018-09-12 16:37:49.331  INFO 2436 --- [main] c.springboot.SpringbootRedisApplication  : No active profile set, falling back to default profiles: default
+2018-09-12 16:37:49.395  INFO 2436 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@20ca951f: startup date [Wed Sep 12 16:37:49 CST 2018]; root of context hierarchy
+2018-09-12 16:37:50.057  INFO 2436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-09-12 16:37:50.438  INFO 2436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7b183531] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-12 16:37:50.834  INFO 2436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-09-12 16:37:50.861  INFO 2436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-12 16:37:50.862  INFO 2436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-09-12 16:37:50.867  INFO 2436 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\jdk1.7.0_79\bin;D:\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;D:\Git\cmd;D:\Git\bin;D:\mysql-8.0.12-winx64\bin;D:\Redis-x64-3.2.100\;D:\consul_1.2.2_windows_amd64\;D:\erl10.0.1\bin;C:\Users\13072\AppData\Local\Microsoft\WindowsApps;;.]
+2018-09-12 16:37:50.959  INFO 2436 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-12 16:37:50.959  INFO 2436 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1564 ms
+2018-09-12 16:37:51.036  INFO 2436 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-09-12 16:37:51.043  INFO 2436 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-12 16:37:51.044  INFO 2436 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-12 16:37:51.044  INFO 2436 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-12 16:37:51.044  INFO 2436 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-12 16:37:51.912  INFO 2436 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:37:52.177  INFO 2436 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@20ca951f: startup date [Wed Sep 12 16:37:49 CST 2018]; root of context hierarchy
+2018-09-12 16:37:52.242  INFO 2436 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll],methods=[GET]}" onto public java.util.List<com.springboot.domain.UserInfo> com.springboot.springbootredis.RedisController.getAllUser()
+2018-09-12 16:37:52.244  INFO 2436 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll/{userId}]}" onto public com.springboot.domain.UserInfo com.springboot.springbootredis.RedisController.getAllUser(int)
+2018-09-12 16:37:52.247  INFO 2436 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-12 16:37:52.248  INFO 2436 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-12 16:37:52.281  INFO 2436 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:37:52.281  INFO 2436 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:37:52.741  INFO 2436 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-12 16:37:52.742  INFO 2436 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-09-12 16:37:52.748  INFO 2436 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-09-12 16:37:52.788  INFO 2436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-09-12 16:37:52.792  INFO 2436 --- [main] c.springboot.SpringbootRedisApplication  : Started SpringbootRedisApplication in 4.044 seconds (JVM running for 4.886)
+2018-09-12 16:37:58.662  INFO 2436 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-09-12 16:37:58.662  INFO 2436 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-12 16:37:58.687  INFO 2436 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2018-09-12 16:37:58.804  INFO 2436 --- [http-nio-8080-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2018-09-12 16:37:58.805  INFO 2436 --- [http-nio-8080-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2018-09-12 16:38:09.292 ERROR 2436 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.98.187.229:6379] with root cause
+
+io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267) ~[netty-transport-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:464) ~[netty-transport-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+
+2018-09-12 16:43:34.580  INFO 9780 --- [main] c.springboot.SpringbootRedisApplication  : Starting SpringbootRedisApplication on DESKTOP-85HJCKK with PID 9780 (D:\springboot-example\springboot-redis\target\classes started by 13072 in D:\springboot-example)
+2018-09-12 16:43:34.607  INFO 9780 --- [main] c.springboot.SpringbootRedisApplication  : No active profile set, falling back to default profiles: default
+2018-09-12 16:43:34.670  INFO 9780 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d778add: startup date [Wed Sep 12 16:43:34 CST 2018]; root of context hierarchy
+2018-09-12 16:43:35.358  INFO 9780 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-09-12 16:43:35.739  INFO 9780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2ee56d9e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-12 16:43:36.151  INFO 9780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-09-12 16:43:36.179  INFO 9780 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-12 16:43:36.179  INFO 9780 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-09-12 16:43:36.184  INFO 9780 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\jdk1.7.0_79\bin;D:\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;D:\Git\cmd;D:\Git\bin;D:\mysql-8.0.12-winx64\bin;D:\Redis-x64-3.2.100\;D:\consul_1.2.2_windows_amd64\;D:\erl10.0.1\bin;C:\Users\13072\AppData\Local\Microsoft\WindowsApps;;.]
+2018-09-12 16:43:36.277  INFO 9780 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-12 16:43:36.277  INFO 9780 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1607 ms
+2018-09-12 16:43:36.354  INFO 9780 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-09-12 16:43:36.359  INFO 9780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-12 16:43:36.360  INFO 9780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-12 16:43:36.360  INFO 9780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-12 16:43:36.360  INFO 9780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-12 16:43:37.234  INFO 9780 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:43:37.495  INFO 9780 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d778add: startup date [Wed Sep 12 16:43:34 CST 2018]; root of context hierarchy
+2018-09-12 16:43:37.555  INFO 9780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll],methods=[GET]}" onto public java.util.List<com.springboot.domain.UserInfo> com.springboot.springbootredis.RedisController.getAllUser()
+2018-09-12 16:43:37.557  INFO 9780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll/{userId}]}" onto public com.springboot.domain.UserInfo com.springboot.springbootredis.RedisController.getAllUser(int)
+2018-09-12 16:43:37.561  INFO 9780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-12 16:43:37.561  INFO 9780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-12 16:43:37.593  INFO 9780 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:43:37.594  INFO 9780 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:43:38.072  INFO 9780 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-12 16:43:38.073  INFO 9780 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-09-12 16:43:38.079  INFO 9780 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-09-12 16:43:38.119  INFO 9780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-09-12 16:43:38.123  INFO 9780 --- [main] c.springboot.SpringbootRedisApplication  : Started SpringbootRedisApplication in 4.215 seconds (JVM running for 5.044)
+2018-09-12 16:43:59.717  INFO 9780 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-09-12 16:43:59.717  INFO 9780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-12 16:43:59.742  INFO 9780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2018-09-12 16:43:59.855  INFO 9780 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2018-09-12 16:43:59.856  INFO 9780 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2018-09-12 16:44:10.347 ERROR 9780 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.98.187.229:6379] with root cause
+
+io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267) ~[netty-transport-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:464) ~[netty-transport-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+
+2018-09-12 16:45:25.250 ERROR 9780 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.98.187.229:6379] with root cause
+
+io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267) ~[netty-transport-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:464) ~[netty-transport-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+
+2018-09-12 16:45:31.945  INFO 3276 --- [main] c.springboot.SpringbootRedisApplication  : Starting SpringbootRedisApplication on DESKTOP-85HJCKK with PID 3276 (D:\springboot-example\springboot-redis\target\classes started by 13072 in D:\springboot-example)
+2018-09-12 16:45:31.949  INFO 3276 --- [main] c.springboot.SpringbootRedisApplication  : No active profile set, falling back to default profiles: default
+2018-09-12 16:45:32.024  INFO 3276 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@67d18ed7: startup date [Wed Sep 12 16:45:32 CST 2018]; root of context hierarchy
+2018-09-12 16:45:32.736  INFO 3276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-09-12 16:45:33.119  INFO 3276 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6c65ebda] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-12 16:45:33.516  INFO 3276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-09-12 16:45:33.544  INFO 3276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-12 16:45:33.544  INFO 3276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-09-12 16:45:33.549  INFO 3276 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\jdk1.7.0_79\bin;D:\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;D:\Git\cmd;D:\Git\bin;D:\mysql-8.0.12-winx64\bin;D:\Redis-x64-3.2.100\;D:\consul_1.2.2_windows_amd64\;D:\erl10.0.1\bin;C:\Users\13072\AppData\Local\Microsoft\WindowsApps;;.]
+2018-09-12 16:45:33.648  INFO 3276 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-12 16:45:33.648  INFO 3276 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1624 ms
+2018-09-12 16:45:33.727  INFO 3276 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-09-12 16:45:33.734  INFO 3276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-12 16:45:33.734  INFO 3276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-12 16:45:33.735  INFO 3276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-12 16:45:33.735  INFO 3276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-12 16:45:34.677  INFO 3276 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:45:34.948  INFO 3276 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@67d18ed7: startup date [Wed Sep 12 16:45:32 CST 2018]; root of context hierarchy
+2018-09-12 16:45:35.012  INFO 3276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll],methods=[GET]}" onto public java.util.List<com.springboot.domain.UserInfo> com.springboot.springbootredis.RedisController.getAllUser()
+2018-09-12 16:45:35.014  INFO 3276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll/{userId}]}" onto public com.springboot.domain.UserInfo com.springboot.springbootredis.RedisController.getAllUser(int)
+2018-09-12 16:45:35.018  INFO 3276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-12 16:45:35.018  INFO 3276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-12 16:45:35.051  INFO 3276 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:45:35.051  INFO 3276 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 16:45:35.515  INFO 3276 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-12 16:45:35.516  INFO 3276 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-09-12 16:45:35.521  INFO 3276 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-09-12 16:45:35.560  INFO 3276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-09-12 16:45:35.564  INFO 3276 --- [main] c.springboot.SpringbootRedisApplication  : Started SpringbootRedisApplication in 4.201 seconds (JVM running for 5.125)
+2018-09-12 16:45:38.581  INFO 3276 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-09-12 16:45:38.581  INFO 3276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-12 16:45:38.603  INFO 3276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-09-12 16:45:38.721  INFO 3276 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2018-09-12 16:45:38.723  INFO 3276 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2018-09-12 16:45:49.254 ERROR 3276 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.98.187.229:6379] with root cause
+
+io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:267) ~[netty-transport-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:464) ~[netty-transport-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.27.Final.jar:4.1.27.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+
+2018-09-12 17:22:05.180  INFO 788 --- [main] c.springboot.SpringbootRedisApplication  : Starting SpringbootRedisApplication on DESKTOP-85HJCKK with PID 788 (D:\springboot-example\springboot-redis\target\classes started by 13072 in D:\springboot-example)
+2018-09-12 17:22:05.183  INFO 788 --- [main] c.springboot.SpringbootRedisApplication  : No active profile set, falling back to default profiles: default
+2018-09-12 17:22:05.228  INFO 788 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@20ca951f: startup date [Wed Sep 12 17:22:05 CST 2018]; root of context hierarchy
+2018-09-12 17:22:05.907  INFO 788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-09-12 17:22:06.289  INFO 788 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$375a5b6b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-12 17:22:06.693  INFO 788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-09-12 17:22:06.721  INFO 788 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-12 17:22:06.721  INFO 788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-09-12 17:22:06.726  INFO 788 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\jdk1.7.0_79\bin;D:\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;D:\Git\cmd;D:\Git\bin;D:\mysql-8.0.12-winx64\bin;D:\Redis-x64-3.2.100\;D:\consul_1.2.2_windows_amd64\;D:\erl10.0.1\bin;C:\Users\13072\AppData\Local\Microsoft\WindowsApps;;.]
+2018-09-12 17:22:06.818  INFO 788 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-12 17:22:06.819  INFO 788 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1591 ms
+2018-09-12 17:22:06.897  INFO 788 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-09-12 17:22:06.903  INFO 788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-12 17:22:06.903  INFO 788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-12 17:22:06.903  INFO 788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-12 17:22:06.903  INFO 788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-12 17:22:07.786  INFO 788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 17:22:08.045  INFO 788 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@20ca951f: startup date [Wed Sep 12 17:22:05 CST 2018]; root of context hierarchy
+2018-09-12 17:22:08.103  INFO 788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll],methods=[GET]}" onto public java.util.List<com.springboot.domain.UserInfo> com.springboot.springbootredis.RedisController.getAllUser()
+2018-09-12 17:22:08.106  INFO 788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getAll/{userId}]}" onto public com.springboot.domain.UserInfo com.springboot.springbootredis.RedisController.getAllUser(int)
+2018-09-12 17:22:08.109  INFO 788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-12 17:22:08.109  INFO 788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-12 17:22:08.139  INFO 788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 17:22:08.139  INFO 788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-12 17:22:08.616  INFO 788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-12 17:22:08.617  INFO 788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-09-12 17:22:08.622  INFO 788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-09-12 17:22:08.661  INFO 788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-09-12 17:22:08.664  INFO 788 --- [main] c.springboot.SpringbootRedisApplication  : Started SpringbootRedisApplication in 4.268 seconds (JVM running for 5.212)
+2018-09-12 17:22:30.704  INFO 788 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-09-12 17:22:30.705  INFO 788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-12 17:22:30.728  INFO 788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2018-09-12 17:22:30.844  INFO 788 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2018-09-12 17:22:30.846  INFO 788 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2018-09-12 17:22:31.368  INFO 788 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-09-12 17:22:31.784  INFO 788 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-09-12 17:22:31.842  INFO 788 --- [http-nio-8080-exec-1] c.s.service.impl.RedisBootServiceImpl    : 用户信息从DB中获取》》UserInfo{userId=1, userName='张三', userClass='三班', memo='测试数据'}
+2018-09-12 17:31:00.681  INFO 788 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.98.187.229:6379
+2018-09-12 17:31:10.690  WARN 788 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:31:10.773  INFO 788 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:31:20.777  WARN 788 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:31:20.873  INFO 788 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:31:30.877  WARN 788 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:31:30.974  INFO 788 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:31:40.976  WARN 788 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:31:41.073  INFO 788 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:31:51.078  WARN 788 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:31:51.173  INFO 788 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:32:01.175  WARN 788 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:32:01.273  INFO 788 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:32:11.276  WARN 788 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:32:11.473  INFO 788 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:32:21.475  WARN 788 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:32:21.773  INFO 788 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:32:31.775  WARN 788 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:32:32.373  INFO 788 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:32:42.376  WARN 788 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:32:43.473  INFO 788 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:32:53.476  WARN 788 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:32:55.577  INFO 788 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:33:05.579  WARN 788 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:33:09.773  INFO 788 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:33:19.779  WARN 788 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:33:27.974  INFO 788 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:33:37.978  WARN 788 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:33:54.374  INFO 788 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:34:04.379  WARN 788 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:34:34.473  INFO 788 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:34:44.476  WARN 788 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:35:14.573  INFO 788 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:35:24.577  WARN 788 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:35:54.673  INFO 788 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:36:04.676  WARN 788 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:36:34.775  INFO 788 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:36:44.779  WARN 788 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:37:14.874  INFO 788 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:37:24.881  WARN 788 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:37:54.973  INFO 788 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:38:04.974  WARN 788 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:38:35.072  INFO 788 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:38:45.075  WARN 788 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:39:15.174  INFO 788 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:39:25.178  WARN 788 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:39:55.273  INFO 788 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:40:05.278  WARN 788 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:40:35.372  INFO 788 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:40:45.375  WARN 788 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:41:15.473  INFO 788 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:41:25.475  WARN 788 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:41:55.574  INFO 788 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:42:05.577  WARN 788 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:42:35.673  INFO 788 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:42:45.675  WARN 788 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:43:15.773  INFO 788 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:43:25.777  WARN 788 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:43:55.874  INFO 788 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:44:05.879  WARN 788 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:44:35.973  INFO 788 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:44:45.977  WARN 788 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:45:16.073  INFO 788 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:45:26.076  WARN 788 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:45:56.173  INFO 788 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:46:06.179  WARN 788 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:46:36.273  INFO 788 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:46:46.278  WARN 788 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:47:16.373  INFO 788 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:47:26.378  WARN 788 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:47:56.473  INFO 788 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:48:06.476  WARN 788 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:48:36.573  INFO 788 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:48:46.576  WARN 788 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /47.98.187.229:6379
+2018-09-12 17:49:16.673  INFO 788 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.98.187.229:6379
+2018-09-12 17:49:16.704  INFO 788 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.98.187.229:6379
+2018-09-12 17:49:22.442  INFO 788 --- [http-nio-8080-exec-5] c.s.service.impl.RedisBootServiceImpl    : 用户信息从DB中获取》》UserInfo{userId=1, userName='张三', userClass='三班', memo='测试数据'}
+2018-09-12 17:49:29.509  INFO 788 --- [http-nio-8080-exec-6] c.s.service.impl.RedisBootServiceImpl    : 用户信息从缓存中获取》》UserInfo{userId=1, userName='张三', userClass='三班', memo='测试数据'}
