@@ -1,0 +1,7 @@
+# ES
+spring:
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+      cluster-nodes: 47.98.187.229:9300
